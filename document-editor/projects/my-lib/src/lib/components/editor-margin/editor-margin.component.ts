@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
-import { DocumentState } from '../utili/documentReducer';
+import { DocumentState } from '../util/documentReducer';
 // import { RootState } from '../redux/store';
 import { createSelector } from '@ngrx/store';
 // import { DOMEventHandlers } from '@mindfiredigital/canvas-editor';
