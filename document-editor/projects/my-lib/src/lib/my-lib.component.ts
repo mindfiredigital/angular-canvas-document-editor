@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
+import { EditorFooterComponent } from './components/editor-footer/editor-footer.component';
 
 @Component({
   selector: 'lib-my-lib',
   standalone: true,
-  imports: [],
   template: `
-    <p>
-      my-lib works!
-    </p>
+    <p>my-lib works!</p>
+    <lib-editor-footer></lib-editor-footer>
   `,
-  styles: ``
+  styles: ``,
+  imports: [EditorFooterComponent],
 })
-export class MyLibComponent {
-
-}
+export class MyLibComponent {}
