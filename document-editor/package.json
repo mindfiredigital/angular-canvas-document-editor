@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build my-lib",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "watch": "ng build my-lib --watch --configuration development",
+    "test": "ng test",
+    "storybook":"ng run document-editor:storybook"
   },
   "private": true,
   "dependencies": {
