@@ -6,8 +6,8 @@ import {
   RowFlex,
 } from '@mindfiredigital/canvas-editor';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'lib-editor-toolbar',
   standalone: true,
@@ -24,13 +24,13 @@ export class EditorToolbarComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    let interval: any;
-    const timeout = setTimeout(() => {
-      interval = setInterval(() => {
-        const data = DOMEventHandlers.getContentStyles();
-        this.contentStyles = data;
-      }, 100);
-    }, 1000);
+    // let interval: any;
+    // const timeout = setTimeout(() => {
+    //   interval = setInterval(() => {
+    //     const data = DOMEventHandlers.getContentStyles();
+    //     this.contentStyles = data;
+    //   }, 100);
+    // }, 1000);
   }
 
   addFormat(format: string): void {
