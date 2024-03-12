@@ -18,15 +18,25 @@ export class CanvasEditorComponent implements OnInit {
   props: any = {};
   documentId: string = '0';
   canvasEditorRef: any;
+  dropdown = {
+    left: 1180,
+    top: 250,
+    visiblity: false,
+  };
+  editorContent = [];
+
+  selectedText = '';
+  instance: any;
   constructor() {}
 
   ngOnInit(): void {
-    // this.route.params.subscribe((params) => {
-    // this.documentId = params['documentId'];
-    this.canvasEditorRef = document.getElementById('canvasEditorRef');
-    // });
+    const container = document.querySelector(
+      '.canvas-editor'
+    ) as HTMLDivElement;
 
-    const container = this.canvasEditorRef;
+    if (container.querySelector('[editor-component="main"]')) {
+      return;
+    }
 
     const editorOptions = {
       height: 1056,
@@ -40,16 +50,16 @@ export class CanvasEditorComponent implements OnInit {
       maxSize: 72,
     };
 
-    // container.addEventListener('mouseup', (e: Event) => {
-    //   this.props.onSelect &&
-    //     this.props.onSelect(DOMEventHandlers.getSelectedText());
-    // });
+    // container.addEventListener('mouseup', (e) => {
+    //   _props.onSelect && _props?.onSelect(DOMEventHandlers.getSelectedText());
+    // })
 
-    // container.addEventListener('keydown', (e: Event) => {
+    // container.addEventListener('keydown', (e) => {
     //   const text = DOMEventHandlers.getContent()?.data?.main;
-    //   this.props.onChange && this.props.onChange(text[0].value);
-    // });
-
-    DOMEventHandlers.register(this.canvasEditorRef, [], editorOptions);
+    //   setEditorContent(text);
+    //   _props?.onChange && _props?.onChange(text[0].value);
+    // })
+    DOMEventHandlers.register(container, this.editorContent, {});
+    DOMEventHandlers.setContent({ main: [{ value: 'hello' }] });
   }
 }
