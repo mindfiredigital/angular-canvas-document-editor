@@ -1,0 +1,12 @@
+.editor > div {
+    margin: 0px;
+  }
+  
+  .canvas-editor {
+    position: relative;
+  }
+  
+  .canvas-editor-main {
+    padding: 70px 30px 80px;
+    margin: auto;
+  }
