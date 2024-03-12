@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'lib-emphasis',
   standalone: true,
-  imports: [MatButtonToggleModule, MatIconModule],
+  imports: [MatButtonToggleModule],
   templateUrl: './emphasis.component.html',
   styleUrl: './emphasis.component.css',
 })

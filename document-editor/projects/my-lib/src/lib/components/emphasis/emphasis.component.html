@@ -1,12 +1,5 @@
-<mat-button-toggle-group [value]="formats" (change)="handleFormat($event)">
-    <mat-button-toggle [value]="'bold'" aria-label="bold" [style]="boldButtonStyle" (click)="handleBold()">
-      <mat-icon>format_bold</mat-icon>
-    </mat-button-toggle>
-    <mat-button-toggle [value]="'italic'" aria-label="italic" [style]="italicButtonStyle" (click)="handleItalic()">
-      <mat-icon>format_italic</mat-icon>
-    </mat-button-toggle>
-    <mat-button-toggle [value]="'underlined'" aria-label="underlined" [style]="underlinedButtonStyle" (click)="handleUnderline()">
-      <mat-icon>format_underlined</mat-icon>
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-  
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style" multiple>
+  <mat-button-toggle value="bold" (click)="handleBold()">Bold</mat-button-toggle>
+  <mat-button-toggle value="italic" (click)="handleItalic()">Italic</mat-button-toggle>
+  <mat-button-toggle value="underline" (click)="handleUnderline()">Underline</mat-button-toggle>
+</mat-button-toggle-group>
