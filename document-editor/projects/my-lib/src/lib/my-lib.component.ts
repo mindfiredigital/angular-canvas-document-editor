@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 import { EditorFooterComponent } from './components/editor-footer/editor-footer.component';
-import { CanvasEditorComponent } from "./components/canvas-editor/canvas-editor.component";
+import { CanvasEditorComponent } from './components/canvas-editor/canvas-editor.component';
+import { EditorToolbarComponent } from './components/editor-toolbar/editor-toolbar.component';
 
 @Component({
-    selector: 'lib-my-lib',
-    standalone: true,
-    template: `
+  selector: 'lib-my-lib',
+  standalone: true,
+  template: `
     <p>my-lib works!</p>
+    <lib-editor-toolbar></lib-editor-toolbar>
     <lib-canvas-editor></lib-canvas-editor>
     <lib-editor-footer></lib-editor-footer>
   `,
-    styles: ``,
-    imports: [EditorFooterComponent, CanvasEditorComponent]
+  styles: ``,
+  imports: [
+    EditorFooterComponent,
+    CanvasEditorComponent,
+    EditorToolbarComponent,
+  ],
 })
 export class MyLibComponent {}
