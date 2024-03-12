@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+// import { ActivatedRoute } from '@angular/router';
 import {
   DOMEventHandlers,
   EditorMode,
@@ -16,15 +16,15 @@ import { MarginRulerComponent } from '../margin-ruler/margin-ruler.component';
 })
 export class CanvasEditorComponent implements OnInit {
   props: any = {};
-  documentId: any;
+  documentId: string = '0';
   canvasEditorRef: any;
-  constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.documentId = params['documentId'];
-      this.canvasEditorRef = document.getElementById('canvasEditorRef');
-    });
+    // this.route.params.subscribe((params) => {
+    // this.documentId = params['documentId'];
+    this.canvasEditorRef = document.getElementById('canvasEditorRef');
+    // });
 
     const container = this.canvasEditorRef;
 
@@ -40,16 +40,16 @@ export class CanvasEditorComponent implements OnInit {
       maxSize: 72,
     };
 
-    container.addEventListener('mouseup', (e: Event) => {
-      this.props.onSelect &&
-        this.props.onSelect(DOMEventHandlers.getSelectedText());
-    });
+    // container.addEventListener('mouseup', (e: Event) => {
+    //   this.props.onSelect &&
+    //     this.props.onSelect(DOMEventHandlers.getSelectedText());
+    // });
 
-    container.addEventListener('keydown', (e: Event) => {
-      const text = DOMEventHandlers.getContent()?.data?.main;
-      this.props.onChange && this.props.onChange(text[0].value);
-    });
+    // container.addEventListener('keydown', (e: Event) => {
+    //   const text = DOMEventHandlers.getContent()?.data?.main;
+    //   this.props.onChange && this.props.onChange(text[0].value);
+    // });
 
-    DOMEventHandlers.register(container, [], editorOptions);
+    DOMEventHandlers.register(this.canvasEditorRef, [], editorOptions);
   }
 }
