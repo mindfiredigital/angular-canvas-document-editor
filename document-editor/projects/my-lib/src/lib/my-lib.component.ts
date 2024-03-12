@@ -7,7 +7,6 @@ import { EditorToolbarComponent } from './components/editor-toolbar/editor-toolb
   selector: 'lib-my-lib',
   standalone: true,
   template: `
-    <p>my-lib works!</p>
     <lib-editor-toolbar></lib-editor-toolbar>
     <lib-canvas-editor></lib-canvas-editor>
     <lib-editor-footer></lib-editor-footer>
