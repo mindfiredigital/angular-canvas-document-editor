@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { EmphasisComponent } from '../emphasis/emphasis.component';
+import { MatDividerModule } from '@angular/material/divider';
 @Component({
   selector: 'lib-editor-toolbar',
   standalone: true,
@@ -17,6 +18,7 @@ import { EmphasisComponent } from '../emphasis/emphasis.component';
     MatButtonModule,
     MatIconModule,
     EmphasisComponent,
+    MatDividerModule,
   ],
   templateUrl: './editor-toolbar.component.html',
   styleUrl: './editor-toolbar.component.css',
@@ -47,5 +49,13 @@ export class EditorToolbarComponent implements OnInit {
       selectedFormats = this.formats.filter((item) => item !== format);
     }
     this.formats = selectedFormats;
+  }
+
+  undo() {
+    DOMEventHandlers.handleUndo();
+  }
+
+  redo() {
+    DOMEventHandlers.handleRedo();
   }
 }

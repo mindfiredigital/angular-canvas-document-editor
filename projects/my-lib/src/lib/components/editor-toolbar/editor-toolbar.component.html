@@ -1,5 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <div class="example-flex-container">
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="undo()">
+        <mat-icon>undo</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="redo()">
+        <mat-icon>redo</mat-icon>
+      </button>
+    </div>
+    <mat-divider></mat-divider>
     <lib-emphasis></lib-emphasis>
   </mat-toolbar-row>
 </mat-toolbar>
