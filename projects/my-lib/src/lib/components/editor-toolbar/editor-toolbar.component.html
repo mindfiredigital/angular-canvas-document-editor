@@ -1,14 +1,188 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="warn">
   <mat-toolbar-row>
+    <mat-divider></mat-divider>
+    <mat-divider inset vertical></mat-divider>
+
     <div class="example-flex-container">
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="undo()">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="undo()"
+      >
         <mat-icon>undo</mat-icon>
       </button>
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="redo()">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="redo()"
+      >
         <mat-icon>redo</mat-icon>
       </button>
     </div>
-    <mat-divider></mat-divider>
+    <mat-divider [vertical]="true"></mat-divider>
     <lib-emphasis></lib-emphasis>
+    <div class="example-flex-container">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="subscript()"
+      >
+        <mat-icon>subscript</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="redo()"
+      >
+        <mat-icon>superscript</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="strikeout()"
+      >
+        <mat-icon>strikeout</mat-icon>
+      </button>
+    </div>
+    <div class="example-flex-container">
+      <mat-divider [vertical]="true"></mat-divider>
+      <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle
+          value="left"
+          aria-label="Text align left"
+          (click)="leftAlign()"
+        >
+          <mat-icon>format_align_left</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="center"
+          aria-label="Text align center"
+          (click)="centerAlign()"
+        >
+          <mat-icon>format_align_center</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="right"
+          aria-label="Text align right"
+          (click)="rightAlign()"
+        >
+          <mat-icon>format_align_right</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="justify"
+          aria-label="Text align justify"
+          (click)="justify()"
+        >
+          <mat-icon>format_align_justify</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="example-flex-container">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="list('UL')"
+      >
+        <mat-icon>format_list_bulleted</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="list('OL')"
+      >
+        <mat-icon>strikeout</mat-icon>
+      </button>
+    </div>
+    <mat-divider [vertical]="true"></mat-divider>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<!-- 
+  <Box sx={{ flexGrow: 1 }}>
+          
+          <Divider
+            flexItem
+            orientation='vertical'
+            sx={{ mx: 0.5, my: 1 }}
+            style={{ marginLeft: -5, marginRight: 5 }}
+          />
+
+          {(!_props?.toolbar || _props?.toolbar?.fontType) && (
+            <FontDropdown
+              {...({ style: _props?.toolbarClass?.item?.fontType } as any)}
+            />
+          )}
+          <Divider
+            flexItem
+            orientation='vertical'
+            sx={{ mx: 0.5, my: 1 }}
+            style={{ marginLeft: 5, marginRight: 5 }}
+          />
+
+          {(!_props?.toolbar || _props?.toolbar?.table) && (
+            <TableDropdown
+              {...({ style: _props?.toolbarClass?.item?.table } as any)}
+            />
+          )}
+          {(!_props?.toolbar || _props?.toolbar?.fontColor) && (
+            <FontColorButton
+              style={_props?.toolbarClass?.item?.fontColor}
+              textColor={contentStyles?.color}
+            />
+          )}
+          {(!_props?.toolbar || _props?.toolbar?.highlight) && (
+            <HighlightTextButton
+              style={_props?.toolbarClass?.item?.highlight}
+              color={contentStyles?.highlight}
+            />
+          )}
+          <Divider
+            flexItem
+            orientation='vertical'
+            sx={{ mx: 0.5, my: 1 }}
+            style={{ marginLeft: -5, marginRight: 5 }}
+          />
+
+          {(!_props?.toolbar || _props?.toolbar?.fontSize) && (
+            <FontSizeButton
+              style={_props?.toolbarClass?.item?.fontSize}
+              size={contentStyles?.size}
+            />
+          )}
+          <Divider
+            flexItem
+            orientation='vertical'
+            sx={{ mx: 0.5, my: 1 }}
+            style={{ marginLeft: 5, marginRight: 5 }}
+          />
+
+          {(!_props?.toolbar || _props?.toolbar?.heading) && (
+            <HeadingButton
+              {...({ style: _props?.toolbarClass?.item?.heading } as any)}
+            />
+          )}
+          <Divider
+            flexItem
+            orientation='vertical'
+            sx={{ mx: 0.5, my: 1 }}
+            style={{ marginLeft: -5, marginRight: 5 }}
+          />
+
+          {(!_props?.toolbar || _props?.toolbar?.hyperlink) && (
+            <ButtonWrapper
+              sx={_props?.toolbarClass?.item?.hyperlink}
+              title='Hyperlink'
+              handleClick={() => DOMEventHandlers.createHyperLink()}>
+              <InsertLinkIcon style={{ fontSize: "large" }} />
+            </ButtonWrapper>
+          )}
+          {(!_props?.toolbar || _props?.toolbar?.image) && (
+            <ImageUploadButton
+              {...({ style: _props?.toolbarClass?.item?.image } as any)}
+            />
+          )}
+        </Stack>
+      </AppBar>
+    </Box>
+ -->
