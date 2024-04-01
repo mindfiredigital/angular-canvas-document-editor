@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { EmphasisComponent } from '../emphasis/emphasis.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatListModule } from '@angular/material/list';
 @Component({
   selector: 'lib-editor-toolbar',
   standalone: true,
@@ -19,6 +21,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     EmphasisComponent,
     MatDividerModule,
+    MatButtonToggleModule,
+    MatListModule,
   ],
   templateUrl: './editor-toolbar.component.html',
   styleUrl: './editor-toolbar.component.css',
@@ -58,4 +62,32 @@ export class EditorToolbarComponent implements OnInit {
   redo() {
     DOMEventHandlers.handleRedo();
   }
+
+  subscript = () => {
+    DOMEventHandlers.handleSubscript();
+  };
+  superscript = () => {
+    DOMEventHandlers.handleSuperscript();
+  };
+  strikeout = () => {
+    DOMEventHandlers.handleStrikeout();
+  };
+
+  leftAlign = () => {
+    DOMEventHandlers.handleAlign(RowFlex.LEFT);
+  };
+  centerAlign = () => {
+    DOMEventHandlers.handleAlign(RowFlex.CENTER);
+  };
+  rightAlign = () => {
+    DOMEventHandlers.handleAlign(RowFlex.RIGHT);
+  };
+  justify = () => {
+    DOMEventHandlers.handleAlign(RowFlex.ALIGNMENT);
+  };
+  list = (listType: string) => {
+    if (listType === 'UL')
+      DOMEventHandlers.handleList(ListType.UL, ListStyle.DECIMAL);
+    else DOMEventHandlers.handleList(ListType.OL, ListStyle.DECIMAL);
+  };
 }
