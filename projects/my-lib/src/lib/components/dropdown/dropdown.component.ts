@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -14,4 +14,9 @@ import { Dropdown } from '../../interface/dropdown';
 export class DropdownComponent {
   @Input() name: string | undefined;
   @Input() items: Dropdown[] | undefined;
+  @Output() selectedOption = new EventEmitter<string>();
+
+  public onChange(event: any) {
+    this.selectedOption.emit(event.target.value);
+  }
 }

@@ -95,7 +95,13 @@
       </button>
     </div>
     <mat-divider [vertical]="true"></mat-divider>
-    <lib-dropdown [name]="'Font'" [items]="fonts"></lib-dropdown>
+    <lib-dropdown
+      [name]="'Font'"
+      [items]="fonts"
+      (selectedOption)="setFontType($event)"
+    ></lib-dropdown>
+    <mat-divider [vertical]="true"></mat-divider>
+    <lib-dropdown [name]="'Heading'" [items]="headings"></lib-dropdown>
   </mat-toolbar-row>
 </mat-toolbar>
 

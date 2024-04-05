@@ -12,7 +12,7 @@ import { EmphasisComponent } from '../emphasis/emphasis.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatListModule } from '@angular/material/list';
-import { FONTS } from '../util/constant';
+import { FONTS, HeadingLevel } from '../util/constant';
 import { DropdownComponent } from '../dropdown/dropdown.component';
 import { Dropdown } from '../../interface/dropdown';
 @Component({
@@ -37,6 +37,7 @@ export class EditorToolbarComponent implements OnInit {
   listType: string = '';
   formats: string[] = [];
   fonts: Dropdown[] = FONTS;
+  headings: Dropdown[] = HeadingLevel;
   constructor() {}
 
   ngOnInit(): void {
@@ -95,5 +96,9 @@ export class EditorToolbarComponent implements OnInit {
     if (listType === 'UL')
       DOMEventHandlers.handleList(ListType.UL, ListStyle.DECIMAL);
     else DOMEventHandlers.handleList(ListType.OL, ListStyle.DECIMAL);
+  };
+
+  setFontType = (type: string) => {
+    DOMEventHandlers.handleFontFamily(type);
   };
 }
