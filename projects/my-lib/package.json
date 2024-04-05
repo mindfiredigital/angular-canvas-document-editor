@@ -7,7 +7,8 @@
     "@angular/material": "^17.2.2",
     "@mindfiredigital/canvas-editor": "^1.2.0",
     "rxjs": "^7.8.1",
-    "material-icons": "^1.13.12"
+    "material-icons": "^1.13.12",
+    "bootstrap": "^5.3.3"
   },
   "dependencies": {
     "tslib": "^2.3.0"
