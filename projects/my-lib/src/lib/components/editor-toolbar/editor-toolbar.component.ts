@@ -12,6 +12,10 @@ import { EmphasisComponent } from '../emphasis/emphasis.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatListModule } from '@angular/material/list';
+import { FontTypeComponent } from '../font-type/font-type.component';
+import { FONTS } from '../util/constant';
+import { DropdownComponent } from '../dropdown/dropdown.component';
+import { Dropdown } from '../../interface/dropdown';
 @Component({
   selector: 'lib-editor-toolbar',
   standalone: true,
@@ -23,6 +27,8 @@ import { MatListModule } from '@angular/material/list';
     MatDividerModule,
     MatButtonToggleModule,
     MatListModule,
+    FontTypeComponent,
+    DropdownComponent,
   ],
   templateUrl: './editor-toolbar.component.html',
   styleUrl: './editor-toolbar.component.css',
@@ -32,10 +38,12 @@ export class EditorToolbarComponent implements OnInit {
   alignment: string = RowFlex.LEFT;
   listType: string = '';
   formats: string[] = [];
-
+  fonts: Dropdown[] = FONTS;
   constructor() {}
 
   ngOnInit(): void {
+    console.log(FONTS);
+
     // let interval: any;
     // const timeout = setTimeout(() => {
     //   interval = setInterval(() => {
