@@ -1,0 +1,15 @@
+<!-- <div>
+  <mat-form-field appearance="outline">
+    <select matNativeControl>
+      @for (item of items; track item) {
+      <option [value]="item.value">{{ item.viewValue }}</option>
+      }
+    </select>
+  </mat-form-field>
+</div> -->
+<select aria-label="Default select example">
+  <option selected>{{ name }}</option>
+  @for (item of items; track item) {
+  <option [value]="item.value">{{ item.viewValue }}</option>
+  }
+</select>
