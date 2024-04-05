@@ -12,7 +12,6 @@ import { EmphasisComponent } from '../emphasis/emphasis.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatListModule } from '@angular/material/list';
-import { FontTypeComponent } from '../font-type/font-type.component';
 import { FONTS } from '../util/constant';
 import { DropdownComponent } from '../dropdown/dropdown.component';
 import { Dropdown } from '../../interface/dropdown';
@@ -27,7 +26,6 @@ import { Dropdown } from '../../interface/dropdown';
     MatDividerModule,
     MatButtonToggleModule,
     MatListModule,
-    FontTypeComponent,
     DropdownComponent,
   ],
   templateUrl: './editor-toolbar.component.html',
