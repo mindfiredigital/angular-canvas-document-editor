@@ -59,7 +59,8 @@ export class CanvasEditorComponent implements OnInit {
     //   setEditorContent(text);
     //   _props?.onChange && _props?.onChange(text[0].value);
     // })
-    DOMEventHandlers.register(container, this.editorContent, {});
+    DOMEventHandlers.register(container, this.editorContent, editorOptions);
     DOMEventHandlers.setContent({ main: [{ value: 'hello' }] });
+    console.log(DOMEventHandlers.getEditorInstance());
   }
 }

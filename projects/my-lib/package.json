@@ -5,7 +5,7 @@
     "@angular/common": "^17.2.0",
     "@angular/core": "^17.2.0",
     "@angular/material": "^17.2.2",
-    "@mindfiredigital/canvas-editor": "^1.2.0",
+    "@mindfiredigital/canvas-editor": "^1.0.5",
     "rxjs": "^7.8.1",
     "material-icons": "^1.13.12"
   },
