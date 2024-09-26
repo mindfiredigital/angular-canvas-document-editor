@@ -9,6 +9,18 @@
     "src/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "libs/**/*.ts",
+    "libs/**/*.tsx",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
+    "./projects/**/*.ts"
+
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
   ]
 }
