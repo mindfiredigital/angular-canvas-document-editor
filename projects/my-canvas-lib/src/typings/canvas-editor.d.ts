@@ -14,22 +14,41 @@ declare module '@mindfiredigital/canvas-editor' {
   }
 
   export enum RowFlex {
-    LEFT = 'left',
-    CENTER = 'center',
-    RIGHT = 'right',
-    JUSTIFY = 'justify',
+    LEFT = "left",
+    CENTER = "center",
+    RIGHT = "right",
+    ALIGNMENT = "alignment"
   }
 
+
   export enum ListType {
-    UNORDERED = 'unordered',
-    ORDERED = 'ordered',
+    UL = "ul",
+    OL = "ol"
   }
 
   export enum ListStyle {
-    DISC = 'disc',
-    CIRCLE = 'circle',
-    SQUARE = 'square',
-    DECIMAL = 'decimal',
+    DISC = "disc",
+    CIRCLE = "circle",
+    SQUARE = "square",
+    DECIMAL = "decimal"
+  }
+  export enum ElementType {
+    TEXT = "text",
+    IMAGE = "image",
+    TABLE = "table",
+    HYPERLINK = "hyperlink",
+    SUPERSCRIPT = "superscript",
+    SUBSCRIPT = "subscript",
+    SEPARATOR = "separator",
+    PAGE_BREAK = "pageBreak",
+    CONTROL = "control",
+    CHECKBOX = "checkbox",
+    LATEX = "latex",
+    TAB = "tab",
+    DATE = "date",
+    BLOCK = "block",
+    TITLE = "title",
+    LIST = "list"
   }
 
   // Interfaces
@@ -64,4 +83,57 @@ declare module '@mindfiredigital/canvas-editor' {
     static getSelectedText(): string;
     // Add other static methods as per your usage
   }
+
+  
+}
+
+declare module '@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener' {
+  export enum RowFlex {
+    LEFT = "left",
+    CENTER = "center",
+    RIGHT = "right",
+    ALIGNMENT = "alignment"
+  }
+
+  export enum ListType {
+    UL = "ul",
+    OL = "ol"
+  }
+
+  export enum ListStyle {
+    DISC = "disc",
+    CIRCLE = "circle",
+    SQUARE = "square",
+    DECIMAL = "decimal"
+  }
+
+  export  enum TitleLevel {
+    FIRST = "first",
+    SECOND = "second",
+    THIRD = "third",
+    FOURTH = "fourth",
+    FIFTH = "fifth",
+    SIXTH = "sixth"
+}
+
+  export interface IRangeStyle {
+
+    undo: boolean;
+    redo: boolean;
+    painter: boolean;
+    font: string;
+    size: number;
+    bold: boolean;
+    italic: boolean;
+    underline: boolean;
+    strikeout: boolean;
+    color: string | null;
+    highlight: string | null;
+    rowFlex: RowFlex  ;
+    rowMargin: number;
+    dashArray: number[];
+    TitleLevel: TitleLevel | null;
+    ListType: ListType | null;
+    ListStyle: ListStyle | null;
+}
 }

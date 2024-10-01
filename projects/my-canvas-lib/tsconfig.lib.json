@@ -12,6 +12,7 @@
     "inlineSources": true,
     "typeRoots": [
       "./src/typings/canvas-editor.d.ts",
+      "./src/typings/canvas-editor-interface.d.ts",
       "./tsconfig.lib.json", // Path relative to tsconfig.lib.json
       "./node_modules/@types"
     ],
@@ -19,6 +20,9 @@
     "paths": {
       "@mindfiredigital/canvas-editor": [
         "./node_modules/@mindfiredigital/canvas-editor"
+      ],
+      "@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener":[
+        "./node_modules/@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener.d.ts"
       ]
     }
   },
@@ -29,6 +33,7 @@
   "include": [
     "src/**/*",
     "src/typings/canvas-editor.d.ts",
+    "src/typings/canvas-editor-interface.d.ts",
     "projects/my-canvas-lib/src/lib/**/*.stories.ts" // Add this line to include story files
   ],
   "files": [
