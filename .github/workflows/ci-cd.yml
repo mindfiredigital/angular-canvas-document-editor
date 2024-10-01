@@ -64,7 +64,7 @@ jobs:
 
       - name: "Prepare for release"
         run: |
-          npx ng-packagr -p ng-package.json
+          npx ng-packagr -p projects/my-canvas-lib/ng-package.json
           
       - name: "Publish to npm"
         run: |
