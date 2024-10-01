@@ -7,7 +7,8 @@
     "build": "ng build my-lib",
     "watch": "ng build my-lib --watch --configuration development",
     "test": "ng test",
-    "storybook": "ng run angular-canvas-document-editor:storybook"
+    "storybook": "ng run angular-canvas-document-editor:storybook",
+    "build-lib": "rm -rf dist && npm cache clean --force && rollup -c"
   },
   "private": true,
   "dependencies": {
