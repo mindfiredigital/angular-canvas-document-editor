@@ -1,0 +1,21 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": []
+  },
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+ "include": [
+  "src/**/*",
+  "projects/my-canvas-lib/src/lib/**/*.stories.ts" // Add this line to include story files
+  ],
+  "files": [
+    // Add any other specific files you want to include
+  ]
+}

@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: '@mindfiredigital/react-canvas-editor'
+    name: '@myapp/angular-canvas-editor'
     runs-on: ubuntu-latest
     permissions:
       contents: write

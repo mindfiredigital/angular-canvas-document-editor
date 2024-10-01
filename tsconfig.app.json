@@ -16,8 +16,7 @@
     "libs/**/*.tsx",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
-    "./projects/**/*.ts"
-
+    "./projects/**/*.ts",
   ],
   "exclude": [
     "test.ts",
