@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build my-lib",
+    "build": "ng build my-canvas-lib",
     "watch": "ng build my-lib --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run angular-canvas-document-editor:storybook",

@@ -2,11 +2,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "../../out-tsc/lib",
     "declaration": true,
     "declarationMap": true,
+    "skipLibCheck": true,
     "inlineSources": true,
-    "types": []
+    "types": [],
+    "paths": {
+      "@mindfiredigital/canvas-editor": ["node_modules/@mindfiredigital/canvas-editor"]
+    }
   },
   "exclude": [
     "**/*.spec.ts"
