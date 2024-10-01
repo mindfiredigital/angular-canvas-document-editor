@@ -62,6 +62,9 @@ jobs:
       - name: "Install dependencies"
         run: npm ci --legacy-peer-deps
 
+      - name: "Install canvas editor"
+        run : npm i @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
+        
       - name: "Prepare for release"
         run: |
           npx ng-packagr -p projects/my-canvas-lib/ng-package.json
