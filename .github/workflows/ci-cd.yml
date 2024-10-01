@@ -73,7 +73,8 @@ jobs:
         run: |
           npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.npm_package }}
+          GITHUB_TOKEN: ${{ secrets.NPM_PKG }}
 
       - name: "Verify .npmignore files"
         run: |
