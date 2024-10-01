@@ -7,18 +7,29 @@
     "declaration": true,
     "declarationMap": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowJs": true,
     "inlineSources": true,
+    "typeRoots": [
+      "./src/typings/canvas-editor.d.ts",
+      "./tsconfig.lib.json", // Path relative to tsconfig.lib.json
+      "./node_modules/@types"
+    ],
     "types": [],
     "paths": {
-      "@mindfiredigital/canvas-editor": ["node_modules/@mindfiredigital/canvas-editor"]
+      "@mindfiredigital/canvas-editor": [
+        "./node_modules/@mindfiredigital/canvas-editor"
+      ]
     }
   },
   "exclude": [
+    "node_modules",
     "**/*.spec.ts"
   ],
- "include": [
-  "src/**/*",
-  "projects/my-canvas-lib/src/lib/**/*.stories.ts" // Add this line to include story files
+  "include": [
+    "src/**/*",
+    "src/typings/canvas-editor.d.ts",
+    "projects/my-canvas-lib/src/lib/**/*.stories.ts" // Add this line to include story files
   ],
   "files": [
     // Add any other specific files you want to include

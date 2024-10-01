@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { ImageUploadButtonComponent } from '../image-upload-button/image-upload-button.component';
-import { RowFlex, DOMEventHandlers, ListType, ListStyle } from '@mindfiredigital/canvas-editor';
+import { EditorMode, IElement, PageMode, DOMEventHandlers, RowFlex, ListType, ListStyle } from '@mindfiredigital/canvas-editor';
 import { IRangeStyle } from '@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener';
 @Component({
   selector: 'lib-emphasis',
