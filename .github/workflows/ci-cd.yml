@@ -26,7 +26,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: "Install canvas editor"
-        run : npm i @mindfiredigital/canvas-editor@1.0.5
+        run : npm i @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
         
       - name: 'Build application'
         run: npm run build
