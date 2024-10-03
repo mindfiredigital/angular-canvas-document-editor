@@ -1,6 +1,6 @@
 {
-  "name": "my-canvas-app",
-  "version": "0.0.0",
+  "name": "canvas-document-editor",
+  "version": "0.0.1",
   "type": "module",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
