@@ -23,6 +23,9 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: "Install Angular CLI"
+        run: npm install -g @angular/cli
+
       - name: "Install dependencies in lib folder"
         run: |
           cd projects/my-canvas-lib  # Navigate to the library folder
@@ -36,7 +39,7 @@ jobs:
       - name: "Build application"
         run: |
           cd projects/my-canvas-lib  # Navigate to the library folder
-          npm run build
+          ng build my-canvas-lib
 
       - name: "Restore changes in package-lock.json"
         run: git restore package-lock.json
@@ -65,6 +68,9 @@ jobs:
           cache: 'npm'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PKG }}
+
+      - name: "Install Angular CLI"
+        run: npm install -g @angular/cli
 
       - name: "Install dependencies in lib folder"
         run: |
