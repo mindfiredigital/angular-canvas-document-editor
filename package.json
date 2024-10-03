@@ -46,6 +46,7 @@
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
+    "semantic-release": "^23.0.0",
     "@storybook/angular": "^7.6.17",
     "@storybook/blocks": "^7.6.17",
     "@storybook/test": "^7.6.17",

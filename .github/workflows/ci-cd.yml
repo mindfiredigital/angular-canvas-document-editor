@@ -3,7 +3,7 @@ name: CI/CD Workflow for Angular Library
 on:
   push:
     branches:
-      - feature/create_wrapper
+      - main
   workflow_dispatch:
 
 jobs:
