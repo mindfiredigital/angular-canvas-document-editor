@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: @myapp/angular-canvas
+    name: "@myapp/angular-canvas"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -17,7 +17,7 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: "Set up Node.js"
         uses: actions/setup-node@v3
         with:
           node-version: '20'
@@ -28,18 +28,18 @@ jobs:
       - name: "Install canvas editor"
         run: npm install @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
 
-      - name: 'Build application'
+      - name: "Build application"
         run: npm run build
 
-      - name: 'Restore changes in package-lock.json'
+      - name: "Restore changes in package-lock.json"
         run: git restore package-lock.json
-      - name: 'Set Git user name and email'
+      - name: "Set Git user name and email"
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
 
   create-release:
-    name: Create GitHub Release and Publish to npm
+    name: "Create GitHub Release and Publish to npm"
     runs-on: ubuntu-latest
     needs: build
     permissions:
@@ -49,7 +49,7 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v3
 
-      - name: Set up Node.js with npm Authentication
+      - name: "Set up Node.js with npm Authentication"
         uses: actions/setup-node@v3
         with:
           node-version: '20'
