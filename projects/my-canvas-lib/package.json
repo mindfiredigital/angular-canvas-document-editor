@@ -9,10 +9,11 @@
   "peerDependencies": {
     "@angular/common": "^17.2.0",
     "@angular/core": "^17.2.0",
-    "@angular/material": "^17.2.2"
+    "@angular/material": "^17.2.2",
+    "@mindfiredigital/canvas-editor": "1.0.5"
   },
   "dependencies": {
-    "@mindfiredigital/canvas-editor": "^1.0.5",
+    "@mindfiredigital/canvas-editor": "1.0.5",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
