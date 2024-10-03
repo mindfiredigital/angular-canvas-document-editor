@@ -1,5 +1,5 @@
 {
-  "name": "@mindfiredigital/angular-canvas-editor",
+  "name": "my-canvas-app",
   "version": "0.0.0",
   "type": "module",
   "publishConfig": {
