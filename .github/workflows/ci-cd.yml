@@ -55,7 +55,8 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PKG }}
+          NPM_TOKEN: ${{ secrets.npm_package }}
+          GITHUB_TOKEN: ${{ secrets.NPM_PKG }}
 
       - name: "Install dependencies"
         run: npm ci --legacy-peer-deps
@@ -69,7 +70,8 @@ jobs:
       - name: "Publish to npm"
         run: npm publish --access=public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PKG }}
+          NPM_TOKEN: ${{ secrets.npm_package }}
+          GITHUB_TOKEN: ${{ secrets.NPM_PKG }}
 
       - name: "Verify .npmignore files"
         run: |
