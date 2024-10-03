@@ -1,5 +1,5 @@
 {
-  "name": "canvas-document-editor",
+  "name": "@canvas-document-editor/myapp",
   "version": "0.0.1",
   "type": "module",
   "publishConfig": {
@@ -68,5 +68,16 @@
   },
   "peerDependencies": {
     "rxjs": "^7.8.1"
+  },
+  "release": {
+    "repositoryUrl": "https://github.com/anilkumarswain140/angular-canvas-document-editor.git",
+    "branches": [
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ]
   }
 }
