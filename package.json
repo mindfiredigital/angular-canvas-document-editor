@@ -2,6 +2,10 @@
   "name": "angular-canvas-document-editor",
   "version": "0.0.0",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +15,6 @@
     "storybook": "ng run angular-canvas-document-editor:storybook",
     "build-lib": "rm -rf dist && npm cache clean --force && ng build my-canvas-lib"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^17.2.0",
     "@angular/cdk": "^17.2.2",
