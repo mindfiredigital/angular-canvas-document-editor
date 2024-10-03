@@ -67,7 +67,7 @@ jobs:
         run: npx ng-packagr -p projects/my-canvas-lib/ng-package.json
 
       - name: "Publish to npm"
-        run: npm publish
+        run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PKG }}
 
