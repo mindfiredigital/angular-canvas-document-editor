@@ -1,9 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-// import { ActivatedRoute } from '@angular/router';
+// import all necessary
 import {
   DOMEventHandlers,
   EditorMode,
-  IElement,
   PageMode,
 } from '@mindfiredigital/canvas-editor';
 import { MarginRulerComponent } from '../margin-ruler/margin-ruler.component';
