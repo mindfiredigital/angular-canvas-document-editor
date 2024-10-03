@@ -23,23 +23,14 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: "Install Angular CLI"
-        run: npm install -g @angular/cli
-
-      - name: "Install dependencies in lib folder"
-        run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
-          npm install --legacy-peer-deps
+      - name: "Install dependencies"
+        run: npm install --legacy-peer-deps
 
       - name: "Install canvas editor"
-        run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
-          npm install @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
+        run: npm install @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
 
       - name: "Build application"
-        run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
-          ng build my-canvas-lib
+        run: npm run build
 
       - name: "Restore changes in package-lock.json"
         run: git restore package-lock.json
@@ -69,23 +60,14 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PKG }}
 
-      - name: "Install Angular CLI"
-        run: npm install -g @angular/cli
-
-      - name: "Install dependencies in lib folder"
-        run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
-          npm ci --legacy-peer-deps
+      - name: "Install dependencies"
+        run: npm ci --legacy-peer-deps
 
       - name: "Install canvas editor"
-        run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
-          npm install @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
+        run: npm install @mindfiredigital/canvas-editor@1.0.5 --legacy-peer-deps
 
       - name: "Prepare for release"
-        run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
-          npx ng-packagr -p ng-package.json
+        run: npx ng-packagr -p projects/my-canvas-lib/ng-package.json
 
       - name: "Semantic Release"
         run: npx semantic-release
@@ -95,6 +77,5 @@ jobs:
 
       - name: "Verify .npmignore files"
         run: |
-          cd projects/my-canvas-lib  # Navigate to the library folder
           echo "Files included in npm package:"
           npm pack --dry-run
