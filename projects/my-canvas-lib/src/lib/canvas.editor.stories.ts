@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
-import { MyLibComponent } from './my-lib.component';
+import { CanvasLibModule } from './my-lib.component';
 import { CanvasEditorComponent } from './components/canvas-editor/canvas-editor.component';
 import { EditorFooterComponent } from './components/editor-footer/editor-footer.component';
 import { EditorToolbarComponent } from './components/editor-toolbar/editor-toolbar.component';
@@ -8,7 +8,7 @@ import { EditorToolbarComponent } from './components/editor-toolbar/editor-toolb
 
 export default {
   title: 'App/CanvasEditor',
-  component: MyLibComponent,
+  component: CanvasLibModule,
   decorators: [
     moduleMetadata({
       imports: [
@@ -23,7 +23,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<MyLibComponent> = (args: MyLibComponent) => ({
+const Template: Story<CanvasLibModule> = (args: CanvasLibModule) => ({
   props: args,
 });
 

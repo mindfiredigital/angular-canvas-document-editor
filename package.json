@@ -46,7 +46,6 @@
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
-    "semantic-release": "^23.0.0",
     "@storybook/angular": "^7.6.17",
     "@storybook/blocks": "^7.6.17",
     "@storybook/test": "^7.6.17",
@@ -63,6 +62,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^4.22.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "semantic-release": "^23.0.0",
     "storybook": "^7.6.17",
     "typescript": "~5.3.2"
   },
@@ -73,7 +73,7 @@
     "dist"
   ],
   "typings": "./dist/my-canvas-lib/index.d.ts",
-  "main": "dist/my-canvas-lib/public-api.d.ts",
+  "main": "./dist/my-canvas-lib/public-api.d.ts",
   "release": {
     "repositoryUrl": "https://github.com/anilkumarswain140/angular-canvas-document-editor.git",
     "branches": [

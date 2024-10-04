@@ -1,42 +1,26 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "../../out-tsc/lib",
+    "target": "es2015",
     "declaration": true,
-    "declarationMap": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowJs": true,
     "inlineSources": true,
-    "typeRoots": [
-      "./src/typings/canvas-editor.d.ts",
-      "./src/typings/canvas-editor-interface.d.ts",
-      "./tsconfig.lib.json", // Path relative to tsconfig.lib.json
-      "./node_modules/@types"
-    ],
     "types": [],
-    "paths": {
-      "@mindfiredigital/canvas-editor": [
-        "./node_modules/@mindfiredigital/canvas-editor"
-      ],
-      "@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener":[
-        "./node_modules/@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener.d.ts"
-      ]
-    }
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  },
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true
   },
   "exclude": [
-    "node_modules",
+    "src/test.ts",
     "**/*.spec.ts"
-  ],
-  "include": [
-    "src/**/*",
-    "src/typings/canvas-editor.d.ts",
-    "src/typings/canvas-editor-interface.d.ts",
-    "projects/my-canvas-lib/src/lib/**/*.stories.ts" // Add this line to include story files
-  ],
-  "files": [
-    // Add any other specific files you want to include
   ]
 }

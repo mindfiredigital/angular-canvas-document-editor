@@ -3,7 +3,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 @Component({
   selector: 'lib-editor-footer',
   standalone: true,
-  imports: [MatToolbarModule],
+  imports: [],
   templateUrl: './editor-footer.component.html',
   styleUrl: './editor-footer.component.css',
 })

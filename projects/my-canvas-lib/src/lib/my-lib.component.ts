@@ -11,7 +11,9 @@ import { EditorToolbarComponent } from './components/editor-toolbar/editor-toolb
     <lib-editor-footer></lib-editor-footer>
   `,
   styles: ``,
+
 })
+
 export class MyLibComponent {
   
 }

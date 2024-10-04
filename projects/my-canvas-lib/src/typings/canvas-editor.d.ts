@@ -10,6 +10,7 @@ declare module '@mindfiredigital/canvas-editor' {
   export enum PageMode {
     SINGLE = 'single',
     MULTI = 'multi',
+    PAGING = ''
     // Add other modes as necessary
   }
 
@@ -64,11 +65,65 @@ declare module '@mindfiredigital/canvas-editor' {
     fontSize: number;
     // Add other properties as per your usage
   }
+  export interface IEditorData {
+    header?: IElement[];
+    main: IElement[];
+    footer?: IElement[];
+}
 
+export interface IEditorOption {
+  mode?: EditorMode;
+  defaultType?: string;
+  defaultFont?: string;
+  defaultSize?: number;
+  minSize?: number;
+  maxSize?: number;
+  defaultBasicRowMarginHeight?: number;
+  defaultRowMargin?: number;
+  defaultTabWidth?: number;
+  width?: number;
+  height?: number;
+  scale?: number;
+  pageGap?: number;
+  underlineColor?: string;
+  strikeoutColor?: string;
+  rangeColor?: string;
+  rangeAlpha?: number;
+  rangeMinWidth?: number;
+  searchMatchColor?: string;
+  searchNavigateMatchColor?: string;
+  searchMatchAlpha?: number;
+  highlightAlpha?: number;
+  resizerColor?: string;
+  resizerSize?: number;
+  marginIndicatorSize?: number;
+  marginIndicatorColor?: string;
+  margins?: any;
+  pageMode?: PageMode;
+  tdPadding?: number;
+  defaultTrMinHeight?: number;
+  defaultColMinWidth?: number;
+  defaultHyperlinkColor?: string;
+  paperDirection?: any;
+  inactiveAlpha?: number;
+  historyMaxRecordCount?: number;
+  printPixelRatio?: number;
+  maskMargin?: any;
+  wordBreak?: any;
+  header?: any;
+  footer?: any;
+  pageNumber?: any;
+  watermark?: any;
+  control?: any;
+  checkbox?: any;
+  cursor?: any;
+  title?: any;
+  placeholder?: any;
+}
   // DOMEventHandlers as a class with static methods
   export class DOMEventHandlers {
-    static register(container: HTMLElement, editorContent: any, options: any): void;
-    static setContent(content: any): void;
+    static register(container: HTMLDivElement, data: IEditorData | IElement[], options?: IEditorOption): void;
+    static setContent({ main: [{  }] }): void;
     static handleBold(): void;
     static handleItalic(): void;
     static handleUnderline(): void;
@@ -78,9 +133,10 @@ declare module '@mindfiredigital/canvas-editor' {
     static handleAlign(alignment: RowFlex): void;
     static handleList(type: ListType, style: ListStyle): void;
     static setFontColor(color: string): void;
-    static setImage(image: { base64: string; width: number; height: number }): void;
+    static setImage(image: { value: string; width: number; height: number }): void;
     static setPaperMargins(margins: any): void;
     static getSelectedText(): string;
+    static getContentStyles(): any;
     // Add other static methods as per your usage
   }
 
