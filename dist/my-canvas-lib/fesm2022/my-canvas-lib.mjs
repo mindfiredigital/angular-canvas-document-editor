@@ -499,7 +499,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImpo
 
 class MyLibComponent {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MyLibComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: MyLibComponent, isStandalone: true, selector: "lib-my-lib", ngImport: i0, template: `
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.3.12", type: MyLibComponent, selector: "lib-my-lib", ngImport: i0, template: `
     <lib-editor-toolbar></lib-editor-toolbar>
     <lib-canvas-editor></lib-canvas-editor>
     <lib-editor-footer></lib-editor-footer>
@@ -507,28 +507,26 @@ class MyLibComponent {
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MyLibComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'lib-my-lib', standalone: true, template: `
+            args: [{ selector: 'lib-my-lib', template: `
     <lib-editor-toolbar></lib-editor-toolbar>
     <lib-canvas-editor></lib-canvas-editor>
     <lib-editor-footer></lib-editor-footer>
-  `, imports: [
-                        EditorFooterComponent,
-                        CanvasEditorComponent,
-                        EditorToolbarComponent,
-                    ] }]
+  ` }]
         }] });
 
 class MyCanvasLibModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MyCanvasLibModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
-    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: MyCanvasLibModule, imports: [MyLibComponent, MatSliderModule], exports: [MyLibComponent] }); }
-    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MyCanvasLibModule, providers: [DocumentService], imports: [MyLibComponent, MatSliderModule] }); }
+    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: MyCanvasLibModule, declarations: [MyLibComponent], imports: [EditorFooterComponent, CanvasEditorComponent, EditorToolbarComponent], exports: [MyLibComponent] }); }
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MyCanvasLibModule, providers: [DocumentService], imports: [EditorFooterComponent, CanvasEditorComponent, EditorToolbarComponent] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: MyCanvasLibModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [MyLibComponent, MatSliderModule], // Import the standalone component
+                    declarations: [MyLibComponent,
+                    ], // Import the standalone component
                     exports: [MyLibComponent], // Export it for external use
-                    providers: [DocumentService]
+                    providers: [DocumentService],
+                    imports: [EditorFooterComponent, CanvasEditorComponent, EditorToolbarComponent]
                 }]
         }] });
 

@@ -5,18 +5,12 @@ import { EditorToolbarComponent } from './components/editor-toolbar/editor-toolb
 
 @Component({
   selector: 'lib-my-lib',
-  standalone: true,
   template: `
     <lib-editor-toolbar></lib-editor-toolbar>
     <lib-canvas-editor></lib-canvas-editor>
     <lib-editor-footer></lib-editor-footer>
   `,
   styles: ``,
-  imports: [
-    EditorFooterComponent,
-    CanvasEditorComponent,
-    EditorToolbarComponent,
-  ],
 })
 export class MyLibComponent {
   
