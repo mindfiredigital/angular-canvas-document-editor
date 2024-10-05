@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: "@itzmytestorg/angular-test-lib"
+    name: "@itzmytestorg/angular-test-lib Build"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -31,6 +31,11 @@ jobs:
 
       - name: "Build application"
         run: npm run build
+
+      - name: "Verify Build Output"
+        run: |
+          ls -la dist/my-canvas-lib
+          cat dist/my-canvas-lib/package.json
 
       - name: "Restore changes in package-lock.json"
         run: git restore package-lock.json
@@ -69,13 +74,20 @@ jobs:
       - name: "Prepare for release"
         run: npx ng-packagr -p projects/my-canvas-lib/ng-package.json
 
+      - name: "Verify Build Output"
+        run: |
+          ls -la dist/my-canvas-lib
+          cat dist/my-canvas-lib/package.json
+
       - name: "Semantic Release"
+        working-directory: ./dist/my-canvas-lib
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PACKG }}
 
-      - name: "Verify .npmignore files"
+      - name: "Verify npm Package Contents"
         run: |
+          cd dist/my-canvas-lib
           echo "Files included in npm package:"
           npm pack --dry-run
