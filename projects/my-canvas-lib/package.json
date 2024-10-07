@@ -1,5 +1,5 @@
 {
-  "name": "@itzmytestorg/angular-test-lib",
+  "name": "@mindfiredigital/angular-canvas-editor",
   "version": "0.0.1",
   "scripts": {
     "storybook": "ng run my-canvas-lib:storybook",
