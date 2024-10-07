@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { DOMEventHandlers, ListStyle, ListType, RowFlex } from '@mindfiredigital/canvas-editor';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
-import { IRangeStyle } from '@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener';
 import { ImageUploadButtonComponent } from '../image-upload-button/image-upload-button.component';
+import { EditorMode, IElement, PageMode, DOMEventHandlers, RowFlex, ListType, ListStyle } from '@mindfiredigital/canvas-editor';
+import { IRangeStyle } from '@mindfiredigital/canvas-editor/dist/src/editor/interface/Listener';
 @Component({
   selector: 'lib-emphasis',
   standalone: true,

@@ -13,10 +13,7 @@ import { EmphasisComponent } from '../emphasis/emphasis.component';
   selector: 'lib-editor-toolbar',
   standalone: true,
   imports: [
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    EmphasisComponent,
+
   ],
   templateUrl: './editor-toolbar.component.html',
   styleUrl: './editor-toolbar.component.css',
