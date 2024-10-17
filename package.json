@@ -77,7 +77,7 @@
   "typings": "./dist/my-canvas-lib/index.d.ts",
   "main": "./dist/my-canvas-lib/public-api.d.ts",
   "release": {
-    "repositoryUrl": "https://github.com/anilkumarswain140/angular-canvas-document-editor.git",
+    "repositoryUrl": "https://github.com/mindfiredigital/angular-canvas-document-editor.git",
     "branches": [
       "main",
       "next",
