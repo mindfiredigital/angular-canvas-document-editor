@@ -2,6 +2,7 @@
   "name": "@mindfiredigital/angular-canvas-editor",
   "version": "0.0.0-deveopment",
   "type": "module",
+  "private" : false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
